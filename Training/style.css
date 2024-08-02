@@ -1,18 +1,15 @@
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
-    /* background-color: black; */
 }
-
 
 /* Navbar */
 .NavBar {
     background-color: rgba(54, 53, 53, 0.411);
     display: flex;
-   
+    width: 100%;
 }
 
 .NavBar li {
@@ -21,6 +18,7 @@
     color: white;
     background-color: transparent;
     text-align: center;
+    flex: 1;
 }
 
 .NavBar li:hover {
@@ -28,17 +26,24 @@
 }
 
 /* Main Section */
-
 .main {
-    padding: 30px ;
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
- .main input {
+.main input {
     height: 40px;
+    width: 100%;
 } 
 
 .main label {
-  padding: 20px;
+    padding: 20px;
+}
+
+.main textarea {
+    width: 100%;
 }
 
 .action-button {
@@ -57,17 +62,13 @@
     background-color: #45a049;
 }
 
-
 /* Media query */
-
-
 @media screen and (min-width: 1201px) {
     .main {
         flex-direction: row;
         justify-content: space-between;
     }
 }
-
 
 @media screen and (max-width: 1200px) and (min-width: 821px) {
     .NavBar {
@@ -102,7 +103,6 @@
     }
 }
 
-
 @media screen and (max-width: 820px) and (min-width: 601px) {
     .NavBar {
         flex-direction: row;
@@ -135,7 +135,6 @@
         width: 100%;
     }
 }
-
 
 @media screen and (max-width: 600px) {
     .main {
