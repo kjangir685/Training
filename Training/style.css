@@ -33,26 +33,36 @@
     flex-direction: column;
 }
 
-.main input {
-    height: 40px;
+.main > div {
     width: 100%;
-} 
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+}
 
 .main label {
-    padding: 20px;
+    display: block;
+    padding: 10px 0;
+    flex: 1;
+}
+
+.main input,
+.main textarea {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 5px;
 }
 
 .main textarea {
-    width: 100%;
+    height: 80px;
 }
 
 .action-button {
-    width: 100px;
+    width: 100%;
     height: 40px;
     background-color: #4CAF50;
     color: white;
-    padding: 14px 20px;
-    margin: 10px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -62,11 +72,33 @@
     background-color: #45a049;
 }
 
+/* Footer */
+.Footer {
+    background-color: rgba(54, 53, 53, 0.411);
+    display: flex;
+    width: 100%;
+    height: 100px; /* Increase the height for the footer */
+    align-items: center;
+    justify-content: center;
+}
+
+.Footer li {
+    list-style: none;
+    padding: 14px 20px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+    flex: 1;
+}
+
+.Footer li:hover {
+    color: #575757;
+}
+
 /* Media query */
 @media screen and (min-width: 1201px) {
     .main {
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
     }
 }
 
@@ -83,23 +115,11 @@
     }
 
     .main {
-        flex-direction: column;
         padding: 20px;
     }
 
     .main label {
         margin-right: 0;
-    }
-
-    .main input[type="text"],
-    .main input[type="tel"],
-    .main textarea {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .action-button {
-        width: 100%;
     }
 }
 
@@ -116,29 +136,16 @@
     }
 
     .main {
-        flex-direction: column;
         padding: 20px;
     }
 
     .main label {
         margin-right: 0;
     }
-
-    .main input[type="text"],
-    .main input[type="tel"],
-    .main textarea {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .action-button {
-        width: 100%;
-    }
 }
 
 @media screen and (max-width: 600px) {
     .main {
-        flex-direction: column;
         padding: 10px;
     }
 
@@ -146,14 +153,7 @@
         margin-right: 0;
     }
 
-    .main input[type="text"],
-    .main input[type="tel"],
-    .main textarea {
-        width: 100%;
-        margin: 5px 0;
-    }
-
-    .action-button {
-        width: 100%;
+    .main > div {
+        flex-direction: column;
     }
 }
